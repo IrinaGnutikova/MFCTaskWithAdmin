@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TableLayout
+        android:shrinkColumns="0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".admin.SeeTaskEmp"
+        android:layout_margin="15dp"
+        android:gravity="center_horizontal">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/liner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnExit"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/mainelement"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/nazad"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btnDelEmp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Удалить сотрудника" />
+
+
+    </LinearLayout>
+    </TableRow>
+<TableRow>
+    <LinearLayout
+        android:id="@+id/linertwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/liner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnAddTask"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/mainelement"
+            android:text="Добавить запись"
+            android:layout_marginEnd="5dp"/>
+
+        <Button
+            android:id="@+id/btnDelTask"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Удалить записи" />
+
+
+    </LinearLayout>
+</TableRow>
+
+<TextView
+    android:id="@+id/textFIO"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:text="ddd"
+    android:textSize="20sp"
+    app:layout_constraintTop_toBottomOf="@+id/linertwo"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFIO">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/task_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/empelement"
+            tools:listitem="@layout/list_task" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    </TableLayout>
+
+</layout>

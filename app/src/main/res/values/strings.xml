@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MFCTasks</string>
+    <string name="Enter">Войти</string>
+    <string name="Password">Пароль</string>
+    <string name="Register">Регистрация</string>
+    <string name="email">Email</string>
+    <string name="LogOut">Выйти из аккаунта</string>
+    <string name="TaskToday">Задания на сегодня:</string>
+    <string name="thisislistemp">Это список сотрудников. Чтобы посмотреть задачи или удалить сотрудника введите почту и пароль сотрудника</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.MainActivityAdmin"
+    android:layout_margin="15dp">
+
+    <ImageView
+        android:id="@+id/imLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/_200px___logo" />
+
+    <Button
+        android:id="@+id/btnSeeEmp"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/imLogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_centerHorizontal="true"
+        android:text="Просмотр сотрудников и их записей"/>
+
+    <Button
+        android:id="@+id/btnAddEmp"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/btnSeeEmp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/mainelement"
+        android:text="Добавить сотрудника"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/btnAddEmp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/mainelementlist"
+        android:text="@string/LogOut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize" />
+
+</RelativeLayout>
+
+</layout>

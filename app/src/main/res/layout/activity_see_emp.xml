@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<TableLayout
+    android:shrinkColumns="0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.ActivitySeeEmp"
+    android:layout_margin="15dp"
+    android:gravity="center_horizontal">
+
+<TableRow
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnExit"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/mainelement"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/nazad"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+
+            android:id="@+id/textTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thisislistemp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</TableRow>
+
+    <TableRow
+        android:id="@+id/tableRowBottom"
+        android:layout_height="wrap_content"
+        android:background="@color/empelement">
+
+<LinearLayout
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Почта сотрудника" />
+    <EditText
+        android:id="@+id/pas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Пароль сотрудника" />
+</LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/imbtnGo"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:background="@color/mainelement"
+            app:srcCompat="@android:drawable/ic_menu_send" />
+
+    </TableRow>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/emp_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/empelement"
+            android:orientation="horizontal"
+            tools:listitem="@layout/activity_list_emploee" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</TableLayout>
+
+</layout>
